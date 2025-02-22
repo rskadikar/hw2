@@ -28,4 +28,5 @@ PG
 aturing 100.00 0
 johnvn 50.00 1
 adal 120.00 1
+user 10000.00 0
 </users>

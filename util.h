@@ -13,20 +13,29 @@
 template <typename T>
 std::set<T> setIntersection(std::set<T>& s1, std::set<T>& s2)
 {
-
-
-
-
-
+    // iterates through the set & creates a new set with all unique aspects
+    // use find feature to look for commonalities
+    // goes through the new set and adds it to the original set
+    std::set<T> results;
+    for (typename std::set<T>::iterator it = s1.begin(); it != s1.end(); ++it) {
+        if (s2.find(*it) != s2.end()) {
+            results.insert(*it);
+        }
+    }
+    return results;
 }
+
 template <typename T>
 std::set<T> setUnion(std::set<T>& s1, std::set<T>& s2)
 {
-
-
-
-
-
+    std::set<T> results;
+    for (typename std::set<T>::iterator it = s1.begin(); it != s1.end(); ++it) {
+        results.insert(*it);
+    }
+    for (typename std::set<T>::iterator it = s2.begin(); it != s2.end(); ++it) {
+        results.insert(*it);
+    }
+    return results;
 }
 
 /***********************************************/
